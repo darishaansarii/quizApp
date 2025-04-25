@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --bg-color: #f4f6f8;
+  --primary-color: #2f3c7e;
+  --text-color: #1a1a1a;
+  --accent-color: #00bfa6;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+#quiz {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: left;
+  margin: 0 auto;
+  width: 400px !important;
+}
+
+#quantity,
+#timer {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#ques {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+label {
+  cursor: pointer;
+}
+
+span {
+  display: block;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+span:hover {
+  background-color: var(--accent-color);
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+}
+
+button:disabled {
+    background-color: #f0f0f0; 
+    color: #B0B0B0; 
+    cursor: not-allowed;
+  }
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #quiz {
+    padding: 20px;
+  }
+
+  #ques {
+    font-size: 16px;
+  }
+
+  span {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #quiz {
+    width: 300px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #quiz {
+    padding: 15px;
+  }
+
+  span {
+    font-size: 13px;
+    padding: 7px 10px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  #quantity,
+  #timer {
+    font-size: 14px;
+  }
+
+  #ques {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #quiz {
+    width: 230px !important;
+  }
+
+  span {
+    font-size: 10px;
+    padding: 4px 7px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 8px 18px;
+  }
+
+  #quantity,
+  #timer {
+    font-size: 11px;
+  }
+
+  #ques {
+    font-size: 12px;
+  }
+}
