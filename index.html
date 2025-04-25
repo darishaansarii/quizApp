@@ -9,7 +9,7 @@
 
     <title>Quiz App</title>
   </head>
-  <body onload="nextQues()">
+  <body onload="nextQues()" onkeydown="handleKeyDown(event)">
     <div class="container">
       <h1>Quiz App</h1>
 
@@ -17,32 +17,31 @@
         <h2 id="quantity">Questions 1 of 10</h2>
         <h3 id="timer">02 : 00</h3>
         <p id="ques"></p>
-        <span>
+        <span onclick="selectOption('opt1')">
           <input
             type="radio"
             name="options"
             value="1"
             id="opt1"
-            onclick="clicked()"
           />
           <label for="opt1" id="option1"></label>
         </span>
-        <span
+        <span onclick="selectOption('opt2')"
           ><input
             type="radio"
             name="options"
             value="2"
             id="opt2"
-            onclick="clicked()" />
+             />
           <label for="opt2" id="option2"></label
         ></span>
-        <span
+        <span onclick="selectOption('opt3')"
           ><input
             type="radio"
             name="options"
             value="3"
             id="opt3"
-            onclick="clicked()" />
+             />
           <label for="opt3" id="option3"></label
         ></span>
 

@@ -126,10 +126,12 @@ function nextQues() {
     document.getElementById("quiz").style.display = "none";
     var scoreNum = document.createElement("h3");
     var scoreText = document.createTextNode(`SCORE: ${score} out of 10.`);
+    scoreNum.setAttribute("class", "score");
     scoreNum.appendChild(scoreText);
     
     var per=document.createElement("h3");
     var perText = document.createTextNode(`Percentage: ${((score / 10) * 100).toFixed(2)}%`);
+    per.setAttribute("class", "per");
     per.appendChild(perText);
 
     document.body.appendChild(scoreNum);
@@ -154,3 +156,25 @@ function clicked() {
   nextBtn.disabled=false;
 }
 
+
+function selectOption(id) {
+    var opt1 = document.getElementById('opt1');
+    var opt2 = document.getElementById('opt2');
+    var opt3 = document.getElementById('opt3');
+    
+    if (opt1.checked) opt1.checked = false;
+    if (opt2.checked) opt2.checked = false;
+    if (opt3.checked) opt3.checked = false;
+  
+    document.getElementById(id).checked = true;
+  
+    clicked();
+  }
+
+  function handleKeyDown(event) {
+    if(event.key === "Enter") {
+        if(!nextBtn.disabled) {
+            nextQues();
+        }
+    }
+  }
